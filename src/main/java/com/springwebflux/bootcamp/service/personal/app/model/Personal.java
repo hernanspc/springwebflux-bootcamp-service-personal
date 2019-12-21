@@ -11,10 +11,10 @@ public class Personal {
 	private String id;
 	private String nrodoc;
 	private String name;
-	private String adress;
-	private String email;
-	
-	
+	private String mail;
+	private String phone;
+	private String status;
+	private String client_type;
 	public String getId() {
 		return id;
 	}
@@ -33,18 +33,35 @@ public class Personal {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getAdress() {
-		return adress;
+	public String getMail() {
+		return mail;
 	}
-	public void setAdress(String adress) {
-		this.adress = adress;
+	public void setMail(String mail) {
+		this.mail = mail;
 	}
-	public String getEmail() {
-		return email;
+	public String getPhone() {
+		return phone;
 	}
-	public void setEmail(String email) {
-		this.email = email;
+	public void setPhone(String phone) {
+		this.phone = phone;
 	}
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
+	public String getClient_type() {
+		return client_type;
+	}
+	public void setClient_type(String client_type) {
+		this.client_type = client_type;
+	}
+	
+	
+	
+ 
+ 
 
 	
 }

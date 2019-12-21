@@ -12,20 +12,20 @@ import com.springwebflux.bootcamp.service.personal.app.model.Personal;
 import com.springwebflux.bootcamp.service.personal.app.services.PersonalServicesImplement;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-
 @RestController
 @RequestMapping("api")
 public class RestControllerPersonal {
-	 @Autowired
-	 PersonalServicesImplement implement;
-	  
-	  @GetMapping("/getPersonal") 
-	  Flux<Personal>getPersonal()
-	 	{
-	 	return implement.getPersonal();
-	 	}	
+	
+@Autowired
+	   PersonalServicesImplement implement;
 
-	 @PostMapping("/createPersonal")
+@GetMapping("/getPersonal") 
+	   Flux<Personal>getPersonal()
+	   {
+	   return implement.getPersonal();
+	   }	
+
+@PostMapping("/createPersonal")
 	 	Mono<Personal> CreatePersonal(@RequestBody Personal personal){		
 	 		return implement.createPersonal(personal);	
 	 	}
@@ -36,7 +36,7 @@ public class RestControllerPersonal {
 	 	}
 	 	
 	 @PutMapping("/updatePersonal")
-	 	Mono<Personal> UpdatePersonal(@RequestBody Personal personal){		
+	 	Mono<Personal> updatePersonal(@RequestBody Personal personal){		
 	 		return implement.updatePersonal(personal);		
 	 	}
 
@@ -47,6 +47,6 @@ public class RestControllerPersonal {
 	 	
 	 @GetMapping("/txt")
 	 	public String txt(){		
-	 	return "Bienvenido Entidad Personas";	
+	 	return "Bienvenido Entidad Personal";	
 	 	}
 }
