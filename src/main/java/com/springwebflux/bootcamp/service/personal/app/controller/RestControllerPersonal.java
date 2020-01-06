@@ -30,23 +30,23 @@ public class RestControllerPersonal {
 	 		return implement.createPersonal(personal);	
 	 	}
 	 	
-	 @DeleteMapping("/deletePersonal/{id}")
+@DeleteMapping("/deletePersonal/{id}")
 	 	Mono<Void> deletePersonal(@PathVariable String id){		
 	 		return implement.deletePersonal(id)	;
 	 	}
 	 	
-	 @PutMapping("/updatePersonal")
+@PutMapping("/updatePersonal")
 	 	Mono<Personal> updatePersonal(@RequestBody Personal personal){		
 	 		return implement.updatePersonal(personal);		
 	 	}
 
-	 @GetMapping("/getPersonalNro/{nro}")
-	 	Mono<Personal>getPersonalNrodoc(@PathVariable String nro){		
-	 		return implement.getPersonalNrodoc(nro);	
+@GetMapping("/getPersonalNrodoc/{nrodoc}")
+	 	Mono<Personal>getPersonalNrodoc(@PathVariable String nrodoc){		
+	 		return implement.getPersonalNrodoc(nrodoc);	
 	 	}
 	 	
-	 @GetMapping("/txt")
+@GetMapping("/txt")
 	 	public String txt(){		
-	 	return "Bienvenido Entidad Personal";	
+	 	return "Bienvenido al Microservicio Personal";	
 	 	}
 }
