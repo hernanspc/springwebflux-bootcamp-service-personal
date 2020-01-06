@@ -1,12 +1,17 @@
 package com.springwebflux.bootcamp.service.personal.app.services;
+import java.util.Date;
+
 import com.springwebflux.bootcamp.service.personal.app.model.Personal;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 public interface IpersonalServices {
 
-	Flux<Personal>getPersonal();
-	Mono<Personal>createPersonal(Personal personal);
-	Mono<Void>deletePersonal(String Id);
-	Mono<Personal>updatePersonal(Personal personal);
-	Mono<Personal>getPersonalNrodoc(String nrodoc);
+	public Flux<Personal> findAll();
+	public Mono<Personal> findById(String id);
+	Flux<Personal> findByName(String name);
+	Mono<Personal> findByNumDoc(String numDoc);
+	public Mono<Personal> save(Personal personal);
+	Mono<Personal> update(Personal personal);
+	public Mono<Void> delete(Personal personal);
+	
 }
