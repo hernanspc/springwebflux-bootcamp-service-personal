@@ -34,7 +34,7 @@ public class RestControllerPersonal {
 	   return Mono.just(ResponseEntity.ok().contentType(MediaType.APPLICATION_JSON).body(service.findAll()));
 	   }
 	   
-	   @PostMapping("/dto")
+	   @PostMapping("/createPersonal")
 		public Mono<ResponseEntity<Personal>> create(@RequestBody Personal personal) {
 			return service.save(personal).map(p -> ResponseEntity.created(URI.create("/api/personal/".concat(p.getId())))
 					.contentType(MediaType.APPLICATION_JSON).body(p));
